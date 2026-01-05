@@ -1,4 +1,29 @@
-import logo from './logo.svg';
+import React from 'react'
+import { Routes,Route } from 'react-router-dom'
+import Home from './components/Home'
+import View from './components/View'
+import ContactUs from './components/ContactUs'
+import DataInsert from './components/DataInsert'
+import Help from './components/Help'
+import Navbar from './components/Navbar'
+const App = () => {
+  return (
+    <>
+    <Navbar></Navbar>
+    <Routes>
+    <Route path='/' element={<Home></Home>}>Home</Route>
+    <Route path='/View' element={<View></View>}>View</Route>
+    <Route path='/ContactUs' element={<ContactUs></ContactUs>}>ContactUs</Route>
+    <Route path='/DataInsert' element={<DataInsert></DataInsert>}>DataInsert</Route>
+    <Route path='/Help' element={<Help></Help>}>Help</Route>
+    </Routes>
+    </>
+  )
+}
+
+export default App
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
